@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { DEFAULT_LANGUAJE, DEFAULT_CITY, LIST_OF_CITIES } from '../utils/constants'
+import { DEFAULT_LANGUAJE, DEFAULT_CITY, LIST_OF_CITIES } from '../utils/constants';
 
 const initialState = {
   listOfCities: LIST_OF_CITIES,
-  languajeSelect: DEFAULT_LANGUAJE,
   citySelect: DEFAULT_CITY,
   isLoading: false,
-  infoWeather: []
+  infoWeather: null
 };
 
 export const weatherSlice = createSlice({
@@ -17,12 +16,15 @@ export const weatherSlice = createSlice({
     setCity: (state, action) => {
       state.citySelect = action.payload;
     },
-    setLanguage: (state, action) => {
-      state.languajeSelect = action.payload;
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
     },
+    setInfoWeather: (state, action) => {
+      state.infoWeather = action.payload;
+    }
   },
 });
 
-export const { setCity, setLanguage } = weatherSlice.actions;
+export const { setCity, setLanguage, setLoading, setInfoWeather } = weatherSlice.actions;
 
 export default weatherSlice.reducer;

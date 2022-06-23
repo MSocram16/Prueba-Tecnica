@@ -9,7 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory create a .env file:
 
 ```
-REACT_APP_OPEN_WEATHER_MAP_URL = https://api.openweathermap.org/data/3.0/onecall
+REACT_APP_OPEN_WEATHER_MAP_URL=https://api.openweathermap.org/data/3.0/onecall
+REACT_APP_OPEN_WEATHER_MAP_ICON=http://openweathermap.org/img/wn/
 REACT_APP_OPEN_WEATHER_MAP_KEY = YOUR API KEY
 ```
 
